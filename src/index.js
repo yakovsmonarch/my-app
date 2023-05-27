@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import style from "./style.module.css";
+import "./index.css";
 
+//https://yt3.ggpht.com/ytc/AKedOLQQA-EpUFJDO9xsxK5pozcD2EXZEQKAQ0GtiHzLQA=s900-c-k-c0x00ffffff-no-rj
 const Blogger = () => {
   return(
-    <div>
+    <div className='main-containter'>
       <Avatar />
       <BloggerName />
       <div>
@@ -15,32 +16,36 @@ const Blogger = () => {
 };
 const Avatar = () => {
   return (
-    <div>
-      <img className={style.imgAvatar} />
+    <div className='image-container'>
+      <img className='profile-photo' />
     </div>
   );
 };
 const BloggerName = () =>{
   return (
-    <div className={style.nameAvatar}>Сергей Иванов</div>
+    <div className='blogger-name-container'>
+      <p>Сергей Иванов</p>
+    </div>
   );
 };
 const Bio = () => {
   return (
-    <p>
-      vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj.
-   </p>
+    <div className='bio'>
+      <p>
+        vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj.
+    </p>
+    </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <div className='root'>
     <Blogger />
     <Blogger />
     <Blogger />
     <Blogger />
     
-  </React.StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

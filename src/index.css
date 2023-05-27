@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-containter {
+    background-color: rgb(146, 154, 154);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 5%;
+    width: 350px;
+    margin: 20px auto;
+}
+
+.image-container {
+    max-width: 200px;
+}
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+    height: auto;
+    content: url('https://yt3.ggpht.com/ytc/AKedOLQQA-EpUFJDO9xsxK5pozcD2EXZEQKAQ0GtiHzLQA=s900-c-k-c0x00ffffff-no-rj');
+}
+.blogger-name-container {
+    margin: 1rem 0;
+}
+.blogger-name-container p {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    letter-spacing: 2px;
+}
+.bio p {
+    font-size: 15px;
+    color: orange;
+}
