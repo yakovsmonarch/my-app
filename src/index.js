@@ -1,19 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const name = "Yakov";
-const foo = (num1, num2) => num1 + num2;
-const App = () => {
+const Blogger = () => {
   return(
     <div>
-      <h1>Имя - {name}, функция сложения (10 и 20): {foo(10, 20)}</h1>
+      <Avatar />
+      <BloggerName />
+      <div>
+        <Bio />
+      </div>
     </div>
   );
 };
+const Avatar = () => {
+  return (
+    <div>
+      <img width='50px' src='https://yt3.ggpht.com/ytc/AKedOLQQA-EpUFJDO9xsxK5pozcD2EXZEQKAQ0GtiHzLQA=s900-c-k-c0x00ffffff-no-rj' alt='блогер' />
+    </div>
+  );
+};
+const BloggerName = () =>{
+  return (
+    <div>Сергей Иванов</div>
+  );
+};
+const Bio = () => {
+  return (
+    <p>
+      vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj.
+   </p>
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Blogger />
+    <Blogger />
+    <Blogger />
+    <Blogger />
+    
   </React.StrictMode>
 );
 
