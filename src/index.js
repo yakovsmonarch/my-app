@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-const myStyle = {
-  color:"blue",
-  fontSize:"24px"
-}
+import "./index.css";
 
 const Blogger = () => {
   return(
@@ -20,13 +16,13 @@ const Blogger = () => {
 const Avatar = () => {
   return (
     <div>
-      <img width='50px' src='https://yt3.ggpht.com/ytc/AKedOLQQA-EpUFJDO9xsxK5pozcD2EXZEQKAQ0GtiHzLQA=s900-c-k-c0x00ffffff-no-rj' alt='блогер' />
+      <img className='img-avatar' />
     </div>
   );
 };
 const BloggerName = () =>{
   return (
-    <div style={myStyle} >Сергей Иванов</div>
+    <div className='blogger-name' >Сергей Иванов</div>
   );
 };
 const Bio = () => {
