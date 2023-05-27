@@ -21,7 +21,7 @@ const Avatar = () => {
 };
 const BloggerName = () =>{
   return (
-    <div>Сергей Иванов</div>
+    <div style={{color: "blue", fontSize: "20px"}} >Сергей Иванов</div>
   );
 };
 const Bio = () => {
