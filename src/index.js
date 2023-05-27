@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+const myStyle = {
+  color:"blue",
+  fontSize:"24px"
+}
+
 const Blogger = () => {
   return(
     <div>
@@ -21,7 +26,7 @@ const Avatar = () => {
 };
 const BloggerName = () =>{
   return (
-    <div style={{color: "blue", fontSize: "20px"}} >Сергей Иванов</div>
+    <div style={myStyle} >Сергей Иванов</div>
   );
 };
 const Bio = () => {
