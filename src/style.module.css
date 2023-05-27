@@ -1,8 +1,8 @@
-.blogger-name{
-    color: red;
-    font-size: 18px;
-}
-.img-avatar{
+.imgAvatar{
     content: url('https://yt3.ggpht.com/ytc/AKedOLQQA-EpUFJDO9xsxK5pozcD2EXZEQKAQ0GtiHzLQA=s900-c-k-c0x00ffffff-no-rj');
-    width: 60px;
+    width: 50px;
+}
+.nameAvatar{
+    font-size: 20px;
+    color: blue;
 }

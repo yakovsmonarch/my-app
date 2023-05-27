@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./index.css";
+import style from "./style.module.css";
 
 const Blogger = () => {
   return(
@@ -16,13 +16,13 @@ const Blogger = () => {
 const Avatar = () => {
   return (
     <div>
-      <img className='img-avatar' />
+      <img className={style.imgAvatar} />
     </div>
   );
 };
 const BloggerName = () =>{
   return (
-    <div className='blogger-name' >Сергей Иванов</div>
+    <div className={style.nameAvatar}>Сергей Иванов</div>
   );
 };
 const Bio = () => {
