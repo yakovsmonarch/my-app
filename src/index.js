@@ -2,21 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./index.css";
 
+const bloggers = [
+  {
+    name:"Сергей Сергеевич",
+    avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
+    bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj."
+},
+  {
+    name:"Петр Петров",
+    avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
+    bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn."
+},
+  {
+    name:"Петр Петров",
+    avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
+    bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn."
+}];
+
 const Blogger = (props) => {
   return(
     <div className='main-containter'>
-      <Avatar />
-      <BloggerName {...props}/>
+      <Avatar url={props.avatar}/>
+      <BloggerName name={props.name}/>
       <div>
-        <Bio />
+        <Bio bio={props.bio}/>
       </div>
     </div>
   );
 };
-const Avatar = () => {
+const Avatar = (props) => {
   return (
     <div className='image-container'>
-      <img className='profile-photo' />
+      <img src={props.url} />
     </div>
   );
 };
@@ -28,21 +45,22 @@ const BloggerName = (props) =>{
     </div>
   );
 };
-const Bio = () => {
+const Bio = (props) => {
   return (
     <div className='bio'>
       <p>
-        vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj.
+        {props.bio}
     </p>
     </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className='root'>
-    <Blogger name="Сергей Иванов"/>
-    <Blogger name="Иван Иванов"/>
-    <Blogger name="Петр Петров"/>
+  <div className='root'>{
+    bloggers.map((blogger)=>{
+      return <Blogger {...blogger} />
+    })
+  }
   </div>
 );
 
