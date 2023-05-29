@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./index.css";
 
-//https://yt3.ggpht.com/ytc/AKedOLQQA-EpUFJDO9xsxK5pozcD2EXZEQKAQ0GtiHzLQA=s900-c-k-c0x00ffffff-no-rj
-const Blogger = () => {
+const Blogger = (props) => {
   return(
     <div className='main-containter'>
       <Avatar />
-      <BloggerName />
+      <BloggerName {...props}/>
       <div>
         <Bio />
       </div>
@@ -21,10 +20,11 @@ const Avatar = () => {
     </div>
   );
 };
-const BloggerName = () =>{
+const BloggerName = (props) =>{
+  console.log("props: ", props);
   return (
     <div className='blogger-name-container'>
-      <p>Сергей Иванов</p>
+      <p>{props.name}</p>
     </div>
   );
 };
@@ -40,11 +40,9 @@ const Bio = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='root'>
-    <Blogger />
-    <Blogger />
-    <Blogger />
-    <Blogger />
-    
+    <Blogger name="Сергей Иванов"/>
+    <Blogger name="Иван Иванов"/>
+    <Blogger name="Петр Петров"/>
   </div>
 );
 
