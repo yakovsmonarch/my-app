@@ -23,7 +23,7 @@ const bloggers = [
 }];
 
 const Blogger = (props) => {
-  const {avatar, name, bio, children} = props;
+  const {avatar, name, bio} = props;
   console.log("props: ", props);
   return(
     <div className='main-containter'>
@@ -34,40 +34,35 @@ const Blogger = (props) => {
     </div>
   );
 };
-const Avatar = (props) => {
+const Avatar = ({url}) => {
   return (
     <div className='image-container'>
-      <img src={props.url} />
+      <img src={url} />
     </div>
   );
 };
-const BloggerName = (props) =>{
-  console.log("props: ", props);
+const BloggerName = ({name}) =>{
   return (
     <div className='blogger-name-container'>
-      <p>{props.name}</p>
+      <p>{name}</p>
     </div>
   );
 };
-const Bio = (props) => {
+const Bio = ({bio}) => {
   return (
     <div className='bio'>
       <p>
-        {props.bio}
+        {bio}
     </p>
     </div>
   );
 }
-const Foo = ()=>{
-  return <p>hello children</p>
-}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='root'>{
     bloggers.map((blogger)=>{
-      return <Blogger key = {blogger.id} {...blogger}>
-          <Foo/>
-        </Blogger>
+      return <Blogger key = {blogger.id} {...blogger}/>
     })
   }
   </div>
