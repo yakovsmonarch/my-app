@@ -4,16 +4,19 @@ import "./index.css";
 
 const bloggers = [
   {
+    id: "1",
     name:"Сергей Сергеевич",
     avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
     bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj."
 },
   {
+    id: "2",
     name:"Петр Петров",
     avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
     bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn."
 },
   {
+    id: "3",
     name:"Петр Петров",
     avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
     bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn."
@@ -58,7 +61,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='root'>{
     bloggers.map((blogger)=>{
-      return <Blogger {...blogger} />
+      return <Blogger key = {blogger.id} {...blogger} />
     })
   }
   </div>
