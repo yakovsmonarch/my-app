@@ -30,7 +30,6 @@ const Blogger = (props) => {
       <Avatar url={avatar}/>
       <BloggerName name={name}/>
       <Bio bio={bio}/>
-      {children}
     </div>
   );
 };
