@@ -2,41 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./index.css";
 import {bloggers} from "./data/data";
+import Blogger from './components/Blogger';
 
-const Blogger = (props) => {
-  const {avatar, name, bio} = props;
-  console.log("props: ", props);
-  return(
-    <div className='main-containter'>
-      <Avatar url={avatar}/>
-      <BloggerName name={name}/>
-      <Bio bio={bio}/>
-    </div>
-  );
-};
-const Avatar = ({url}) => {
-  return (
-    <div className='image-container'>
-      <img src={url} />
-    </div>
-  );
-};
-const BloggerName = ({name}) =>{
-  return (
-    <div className='blogger-name-container'>
-      <p>{name}</p>
-    </div>
-  );
-};
-const Bio = ({bio}) => {
-  return (
-    <div className='bio'>
-      <p>
-        {bio}
-    </p>
-    </div>
-  );
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
