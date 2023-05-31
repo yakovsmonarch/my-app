@@ -1,26 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./index.css";
-
-const bloggers = [
-  {
-    id: "1",
-    name:"Сергей Сергеевич",
-    avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
-    bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn sljfkvnlsdfjvnlsfvnlsfj."
-},
-  {
-    id: "2",
-    name:"Петр Петров",
-    avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
-    bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn."
-},
-  {
-    id: "3",
-    name:"Петр Петров",
-    avatar: "https://i.vimeocdn.com/portrait/60837690_150x150",
-    bio:"vnlsdkjfvnlsdfvnlsjfvn lkjfdvnlsfvnsldfjvn."
-}];
+import {bloggers} from "./data/data";
 
 const Blogger = (props) => {
   const {avatar, name, bio} = props;
